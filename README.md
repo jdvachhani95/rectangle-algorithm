@@ -71,10 +71,10 @@ RECTANGLES_INPUT = `[[A,B,C,D],[E,F,G,H]]`
 
 ##### Ref for A,B,C,D,E,F,G,H are as following:
 
-(A,B)=> Lowest x & y point of Rectangle1
-(C,D)=> Highest x & y point of Rectangle1
-(E,F)=> Lowest x & y point of Rectangle2
-(G,H)=> Highest x & y point of Rectangle2
+- (A,B)=> Lowest x & y point of Rectangle1
+- (C,D)=> Highest x & y point of Rectangle1
+- (E,F)=> Lowest x & y point of Rectangle2
+- (G,H)=> Highest x & y point of Rectangle2
 
 ### Algorithms
 
