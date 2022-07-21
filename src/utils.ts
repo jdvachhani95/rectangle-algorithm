@@ -1,10 +1,7 @@
-import {
-  AnalyzeRectanglesQueryInput,
-  RectanglesInput,
-} from "./interfaces/analyzeDataTypes";
+import { AnalyzeRectanglesQueryInput, RectanglesInput } from './interfaces/analyzeDataTypes';
 
 export const transformInputInMappedObject = (
-  rectanglesQueryInput: AnalyzeRectanglesQueryInput
+  rectanglesQueryInput: AnalyzeRectanglesQueryInput,
 ): RectanglesInput => {
   return {
     A: rectanglesQueryInput[0][0],
