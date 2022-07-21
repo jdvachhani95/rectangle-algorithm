@@ -79,12 +79,30 @@ export class AnalyzeAlgorithm {
     H: number,
   ): string {
     switch (true) {
+      /* here condition E > C check that the most left point of the rectangle (EFGH) is
+       * on the right side of the most right point of the rectangle (ABCD)
+       * so there is no overlapping.
+       */
       case E > C || F > D || A > G || B > H:
         return 'No Intersection';
+
+      /* here condition check that all the points of the rectangle (EFGH) are inside the rectangle (ABCD)
+       * hence it is a case of containment.
+       */
       case A <= E && G <= C && B <= F && H <= D:
         return this.analyzeContainment(A, B, C, D, E, F, G, H);
+
+      /* here condition check left most left coordinates of rectangle (EFGH) has an alignment with
+       * right most coordinates of rectangle (ABCD)
+       * then it is a case of alignment
+       */
       case E === C || F === D || A === G || B === H:
         return this.analyzeAlignment(A, B, C, D, E, F, G, H);
+
+      /* here condition E < C check that the most left point of the rectangle (EFGH) is in boundary of
+       * most right point of the rectangle (ABCD)
+       * then there is a overlapping.
+       */
       case E < C || F < D || A < G || B < H:
         return 'Intersection';
     }

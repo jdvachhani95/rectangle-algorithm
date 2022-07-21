@@ -9,7 +9,7 @@
 
 ### Description
 
-This is a REST API service exposing an algorithm to analyze given two rectangles or calculate covered area by them. This service use nestJS and TypeScript. Different scenarios and possibilities have been cover in written unit tests for analyze rectangle algorithm.
+This is a REST API service exposing an algorithm to analyze given two rectangles or calculate covered area by them. This service use nestJS and TypeScript. Different scenarios and possibilities are covered in unit tests to analyze rectangle algorithm.
 
 ### Pre-installation
 
