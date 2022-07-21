@@ -5,5 +5,6 @@ import { AnalyzeAlgorithm } from "./analyze.algorithm";
 @Module({
   controllers: [AnalyzeController],
   providers: [AnalyzeAlgorithm],
+  exports: [AnalyzeAlgorithm],
 })
 export class AnalyzeModule {}
