@@ -5,13 +5,13 @@ import { RectangleCoordinatesValidationPipe } from '../validations/rectanglesCoo
 
 @Controller('area/calculate')
 export class AreaController {
-  constructor(private readonly areaService: AreaAlgorithm) {}
+  constructor(private readonly areaAlgorithm: AreaAlgorithm) {}
 
   @Get('two-rectangles')
   @UsePipes(new RectangleCoordinatesValidationPipe())
   calculateTotalCoveredArea(@Query('rectangles') rectangles: any): any {
     const mappedCoordinates = transformInputInMappedObject(JSON.parse(rectangles));
     const { A, B, C, D, E, F, G, H } = mappedCoordinates;
-    return this.areaService.calculateCoveredArea(A, B, C, D, E, F, G, H);
+    return this.areaAlgorithm.calculateCoveredArea(A, B, C, D, E, F, G, H);
   }
 }
