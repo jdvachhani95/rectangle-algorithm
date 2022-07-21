@@ -1,8 +1,8 @@
 import { Module } from '@nestjs/common';
 import { AreaController } from './area.controller';
 import { AreaAlgorithm } from './area.algorithm';
-import { AnalyzeAlgorithm } from 'src/Analyze/analyze.algorithm';
-import { AnalyzeModule } from 'src/analyze/analyze.module';
+import { AnalyzeAlgorithm } from '../analyze/analyze.algorithm';
+import { AnalyzeModule } from '../analyze/analyze.module';
 
 @Module({
   imports: [AnalyzeModule],
