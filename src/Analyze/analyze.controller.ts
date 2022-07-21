@@ -9,7 +9,7 @@ export class AnalyzeController {
 
   @Get('all-possibilities')
   @UsePipes(new RectangleCoordinatesValidationPipe())
-  analyzeTwoRectangles(@Query('rectangles') rectangles: any) {
+  analyzeTwoRectangles(@Query('rectangles') rectangles: any): { [key: string]: any } {
     const mappedCoordinates = transformInputInMappedObject(JSON.parse(rectangles));
     const { A, B, C, D, E, F, G, H } = mappedCoordinates;
     const analyzedResult = {

@@ -1,5 +1,5 @@
 import { PipeTransform, Injectable, ArgumentMetadata, BadRequestException } from '@nestjs/common';
-import { transformInputInMappedObject } from 'src/utils';
+import { transformInputInMappedObject } from '../utils';
 
 @Injectable()
 export class RectangleCoordinatesValidationPipe implements PipeTransform {
@@ -7,7 +7,7 @@ export class RectangleCoordinatesValidationPipe implements PipeTransform {
     if (metadata.type === 'query') {
       const parsedValue = JSON.parse(value);
       if (parsedValue.some((rectanglePoints: any) => rectanglePoints.length !== 4)) {
-        throw new BadRequestException('In valid given rectangles input');
+        throw new BadRequestException('Invalid given rectangles input');
       }
       const mappedCoordinates = transformInputInMappedObject(parsedValue);
       const { A, B, C, D, E, F, G, H } = mappedCoordinates;
