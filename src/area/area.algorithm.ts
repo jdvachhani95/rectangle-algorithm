@@ -1,6 +1,5 @@
-import { Injectable } from "@nestjs/common";
-import { AnalyzeAlgorithm } from "../analyze/analyze.algorithm";
-import { RectanglesInput } from "../interfaces/analyzeDataTypes";
+import { Injectable } from '@nestjs/common';
+import { AnalyzeAlgorithm } from '../analyze/analyze.algorithm';
 @Injectable()
 export class AreaAlgorithm {
   constructor(private readonly analyzeAlgorithm: AnalyzeAlgorithm) {}
@@ -26,7 +25,7 @@ export class AreaAlgorithm {
     E: number,
     F: number,
     G: number,
-    H: number
+    H: number,
   ) {
     /* bottom left point of the overlapping area. */
     const bottom_x = Math.max(A, E);
@@ -47,27 +46,16 @@ export class AreaAlgorithm {
     E: number,
     F: number,
     G: number,
-    H: number
+    H: number,
   ) {
-    const analyzedResult = this.analyzeAlgorithm.getAnalyzedResult(
-      A,
-      B,
-      C,
-      D,
-      E,
-      F,
-      G,
-      H
-    );
-    if (analyzedResult === "Intersection") {
+    const analyzedResult = this.analyzeAlgorithm.getAnalyzedResult(A, B, C, D, E, F, G, H);
+    if (analyzedResult === 'Intersection') {
       return (
         this.calRectangleArea(A, B, C, D) +
         this.calRectangleArea(E, F, G, H) -
         this.overlapArea(A, B, C, D, E, F, G, H)
       );
     }
-    return (
-      this.calRectangleArea(A, B, C, D) + this.calRectangleArea(E, F, G, H)
-    );
+    return this.calRectangleArea(A, B, C, D) + this.calRectangleArea(E, F, G, H);
   }
 }
