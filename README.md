@@ -78,7 +78,7 @@ RECTANGLES_INPUT = `[[A,B,C,D],[E,F,G,H]]`
 
 ### Algorithms
 
-- Analyze given rectangles coordinates and return one of the following
+- Analyze given rectangles coordinates and return one of the following (Test cases can be found here `src/analyze/test/stubs/`)
 
   - Adjacent (Proper)
   - Adjacent (Sub-line)
