@@ -1,7 +1,7 @@
 import { Injectable } from "@nestjs/common";
 import { RectanglesInput } from "../interfaces/analyzeDataTypes";
 @Injectable()
-export class AnalyzeService {
+export class AnalyzeAlgorithm {
   constructor() {}
 
   // ************** Coordinates position for the Ref *****************
