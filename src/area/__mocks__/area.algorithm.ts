@@ -1,4 +1,4 @@
-export const AnalyzeAlgorithm = jest.fn().mockReturnValue({
+export const AreaAlgorithm = jest.fn().mockReturnValue({
   calRectangleArea: jest.fn().mockImplementation((a, b, c, d) => {
     return (c - a) * (d - b);
   }),
